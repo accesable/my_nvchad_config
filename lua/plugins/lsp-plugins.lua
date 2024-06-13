@@ -3,7 +3,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "gopls","rust-analyzer","clangd"
+        "gopls","rust-analyzer","clangd","lua-language-server"
       },
     },
   },
@@ -16,11 +16,11 @@ return {
       require "configs.clangd-configs"
     end,
   },
-  {
-      'mfussenegger/nvim-jdtls',
-      config = function()
-        require('configs.jdtls-lsp-config').setup()
-      end
-  }
+{
+    'mfussenegger/nvim-jdtls',
+    config = function()
+      require('configs.jdtls-lsp-config').setup()
+    end
+}
 
 }

@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/jdtls_keybindings.lua
-
 local M = {}
 
 M.setup = function(bufnr)

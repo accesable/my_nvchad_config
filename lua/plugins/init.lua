@@ -6,6 +6,12 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
