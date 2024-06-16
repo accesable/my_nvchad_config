@@ -14,5 +14,15 @@ lspconfig.gopls.setup({
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   -- Automatically find the project root directory based on go.work or go.mod files
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings ={
+    completeUnimported = true,
+    usePlaceholders = true,
+    analyses = {
+      unusedparams = true,
+    },
+    gopls = {
+            gofumpt = true
+    }
+  }
 })
 

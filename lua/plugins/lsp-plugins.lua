@@ -16,11 +16,18 @@ return {
       require "configs.clangd-configs"
     end,
   },
-{
-    'mfussenegger/nvim-jdtls',
-    config = function()
-      require('configs.jdtls-lsp-config').setup()
-    end
-}
+  {
+      'mfussenegger/nvim-jdtls',
+      config = function()
+        require('configs.jdtls-lsp-config').setup()
+      end
+  },
+  {
+    "nvimtools/none-ls.nvim",
+     ft = "go",
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
 
 }
